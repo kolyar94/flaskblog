@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Изменение статьи
+{% endblock %}
+
+{% block body %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    <h1>Изменение статьи</h1>
+<form action="" method="post" enctype=multipart/form-data>
+    <input type="text" name="title" id="title" class="container form-control" value="{{ article.title }}" placeholder="Введите название статьи"><br>
+    <textarea  name="intro" id="intro" class="container form-control"  placeholder="Введите анонс">{{ article.intro }}</textarea><br>
+    <textarea  name="text" id="text" class="container form-control"  placeholder="Введите текст статьи">{{ article.text }}</textarea><br>
+    <input type="file" name="file" id="file" >
+    <input type="submit" class="btn btn-success" value="Изменить">
+</form>
+</div>
+{% endblock %}

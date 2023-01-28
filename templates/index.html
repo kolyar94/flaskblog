@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+Главная страница
+{% endblock %}
+{% block body %}
+<body class="container" >
+    <img src="static/images/fon11.png"  alt="" style="width:100%">
+  <div class="container marketing">
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="static/images/I.png" class="bd-placeholder-img rounded-circle" width="200" height="200">
+        <h2 class="fw-normal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Николай </font></font></h2>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Для просмотра страницы Николая нажмите на кнопочку ниже))</font></font></p>
+        <p><a class="btn btn-secondary" href="https://www.instagram.com/iarets_nikolai/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Посмотреть профиль </font></font></a></p>
+      </div>
+      <div class="col-lg-4">
+        <img src="static/images/over.png" class="bd-placeholder-img rounded-circle" width="200" height="200">
+        <h2 class="fw-normal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IT OVERONE</font></font></h2>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Успей записаться на IT курсы!! Количество мест ограничено! </font></font></p>
+        <p><a class="btn btn-secondary" href="https://overone.by/4?utm_source=insta_taplink_over"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Записаться на курсы</font></font></a></p>
+      </div>
+      <div class="col-lg-4">
+        <img src="static/images/adv.png" class="bd-placeholder-img rounded-circle" width="200" height="200">
+        <h2 class="fw-normal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Эдвард</font></font></h2>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Человек который поможет тебе осуществить все твои мечты))</font></font></p>
+        <p><a class="btn btn-secondary" href="https://www.instagram.com/edward_homitskiy/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Есть вопросы?! Пиши!</font></font></a></p>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+            {{ article }}
+        <div class="alert alert-info">
+          <h2 class="featurette-heading fw-normal lh-1">{{ articles[0].title }}</h2>
+          <p class="lead"><font style="vertical-align: inherit;">{{ articles[0].intro }}</font></p>>
+          <p><b>Дата:{{ articles[0].date }}</b></p>
+          <a href="/posts/{{articles[0].id}}" class="btn btn-warning">Детальнее</a>
+        </div>
+
+      </div>
+      <div class="col-md-5">
+        <img src="{{ articles[0].file }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+       <div class="col-md-7">
+            {{ article}}
+        <div class="alert alert-info">
+          <h2 class="featurette-heading fw-normal lh-1">{{ articles[1].title}}</h2>
+          <p class="lead"><font style="vertical-align: inherit;">{{ articles[1].intro }}</font></p>>
+          <p><b>Дата: {{ articles[1].date }} </b></p>
+          <a href="/posts/{{articles[1].id}}" class="btn btn-warning">Детальнее</a>
+        </div>
+
+      </div>
+      <div class="col-md-5">
+        <img src="{{ articles[1].file }}"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+            {{ article}}
+        <div class="alert alert-info">
+        <h2 class="featurette-heading fw-normal lh-1">{{ articles[2].title}}</h2>
+        <p class="lead"><font style="vertical-align: inherit;">{{ articles[2].intro }}</font></p>>
+        <p><b>Дата: {{ articles[2].date }} </b></p>
+        <a href="/posts/{{articles[2].id}}" class="btn btn-warning">Детальнее</a>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <img src="{{ articles[2].file }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+    </div>
+
+      </div>
+    </div>
+
+</body>
+{% endblock %}
